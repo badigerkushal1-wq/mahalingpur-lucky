@@ -2,17 +2,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deposit</title><link rel="stylesheet" href="css/style.css"></head>
-<body><div class="container"><div class="top-box">
+<title>Deposit</title><link rel="stylesheet" href="css/style.css"></head><body onload="loadBalance()"><div class="container"><div class="top-box">
 <h1>Deposit 💳</h1>
-<button class="download-btn">Secure</button>
-</div><div class="balance-card"><h3>Minimum Deposit</h3><h1>₹100</h1><p>UPI ID: lucky@upi</p></div><div class="room-card premium"><h2>Submit Payment</h2><input type="text" placeholder="Enter UTR Number" class="utr-input"><button class="confirm-btn">Submit Deposit</button>
-
-</div><div class="room-card"><h2>Instructions 📢</h2><p>1. Send payment to UPI ID.</p><p>2. Enter correct UTR number.</p><p>3. Deposit updates within 5 minutes.</p></div></div><div class="bottom-nav"><a href="dashboard.html">Home</a>
+<button class="download-btn">FAST</button>
+</div><div class="balance-card"><h3>Current Balance</h3><h1 id="balance">₹0</h1><p>UPI ID: lucky@upi</p></div><div class="room-card premium"><div class="room-top">
+<h2>Add Balance</h2>
+<span class="live-tag">LIVE</span>
+</div><input type="number" id="depositAmount" placeholder="Enter Amount" class="utr-input"><input type="text" id="utr" placeholder="Enter UTR Number" class="utr-input"><button class="confirm-btn" onclick="addDeposit()">
+Submit Deposit
+</button></div></div><div class="bottom-nav"><a href="dashboard.html">Home</a>
 <a href="deposit.html">Payment</a>
 <a href="room.html">Rooms</a>
 <a href="winners.html">Winners</a>
 <a href="admin.html">My</a>
 
-</div></body>
+</div><script src="js/script.js"></script></body>
 </html>
