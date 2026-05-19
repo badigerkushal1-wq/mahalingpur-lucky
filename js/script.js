@@ -73,3 +73,28 @@ alert("Insufficient Balance");
 }
 
 }
+
+function addDeposit(){
+
+let amount = parseInt(document.getElementById("depositAmount").value);
+
+let utr = document.getElementById("utr").value;
+
+if(!amount || utr === ""){
+
+alert("Fill all fields");
+return;
+
+}
+
+let balance = parseInt(localStorage.getItem("user_balance"));
+
+balance = balance + amount;
+
+localStorage.setItem("user_balance", balance);
+
+alert("Deposit Successful 🚀");
+
+location.reload();
+
+}
