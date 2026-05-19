@@ -15,6 +15,8 @@ localStorage.setItem("user_name", name);
 localStorage.setItem("user_mobile", mobile);
 localStorage.setItem("user_password", password);
 
+localStorage.setItem("user_balance", "1000");
+
 alert("Account Created Successfully");
 
 window.location.href = "index.html";
@@ -36,6 +38,37 @@ window.location.href = "dashboard.html";
 }else{
 
 alert("Invalid Login Details");
+
+}
+
+}
+
+function loadBalance(){
+
+let balance = localStorage.getItem("user_balance");
+
+document.getElementById("balance").innerHTML =
+"₹" + balance;
+
+}
+
+function joinRoom(amount){
+
+let balance = parseInt(localStorage.getItem("user_balance"));
+
+if(balance >= amount){
+
+balance = balance - amount;
+
+localStorage.setItem("user_balance", balance);
+
+alert("Room Joined Successfully 🚀");
+
+location.reload();
+
+}else{
+
+alert("Insufficient Balance");
 
 }
 
