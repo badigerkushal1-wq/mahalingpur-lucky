@@ -11,6 +11,7 @@ return;
 
 }
 
+localStorage.setItem("user_name", name);
 localStorage.setItem("user_mobile", mobile);
 localStorage.setItem("user_password", password);
 
